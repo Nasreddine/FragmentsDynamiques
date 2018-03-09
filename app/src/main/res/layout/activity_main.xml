@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:background="@color/colorAccent"
-    android:orientation="vertical"
 
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorAccent"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,20 +15,22 @@
         android:textColor="#FFFFFF" />
 
 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
 
+    >
+
+    <Button
+        android:id="@+id/chngBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changer fraglement" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        android:orientation="vertical"
-
-        >
-
-        <Button
-            android:id="@+id/chngBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Changer fraglement" />
-
-
+        android:layout_height="match_parent" />
 
 </LinearLayout>

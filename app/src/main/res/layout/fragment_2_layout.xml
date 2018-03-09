@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="150dp"
-    android:orientation="horizontal"
-    android:background="@color/colorPrimary"
     android:id="@+id/fragment2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#accd72"
 
-    >
+    android:gravity="bottom|fill_vertical|center"
+    android:orientation="horizontal">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal|center"
         android:text="Layout du fragment 2"
-        android:textColor="#FFFFFF"
-        />
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>
 

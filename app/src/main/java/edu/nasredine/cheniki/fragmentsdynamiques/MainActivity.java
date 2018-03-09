@@ -1,5 +1,6 @@
 package edu.nasredine.cheniki.fragmentsdynamiques;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getFragmentManager().beginTransaction()
-                .add(R.id.container, new FragmentDynamique())
+                .add(R.id.fragment_container, new FragmentDynamique())
+                .addToBackStack(null)
                 .commit();
 
         Button btn = (Button) findViewById(R.id.chngBtn);
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().
-                        replace(R.id.container, new FragmentDynamique2())
+                        replace(R.id.fragment_container, new FragmentDynamique2())
+                        .addToBackStack(null)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .commit();
             }
         });
